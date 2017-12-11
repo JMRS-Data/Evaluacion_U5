@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="master_report" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e38ef33e-8257-4414-a612-8faaa7919ba8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Unidad5 JSF"/>
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[dGJsX3JvbGUgQVMgLDM1LDU1LDdhNzMyYTM5LWY4YWQtNDNjZS1hMWQ2LTFlOGFkZjkxMzdlZjs=
+]]>
+	</property>
+	<queryString>
+		<![CDATA[SELECT tbl_role.id_role,
+	tbl_role.namerole
+FROM tbl_role]]>
+	</queryString>
+	<field name="id_role" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id_role"/>
+	</field>
+	<field name="namerole" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namerole"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="580" height="30" uuid="ad2fea71-16e5-4dc9-8ab4-5d1e364695f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OCR A Extended" size="22"/>
+				</textElement>
+				<text><![CDATA[USERS by ROLE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="88" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="31" width="529" height="30" uuid="537de940-82a2-4781-8496-55986e673321"/>
+				<subreportParameter name="role">
+					<subreportParameterExpression><![CDATA[$F{id_role}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["details_report.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement mode="Opaque" x="50" y="0" width="60" height="20" backcolor="#567AFC" uuid="5ca4738b-5a67-4194-8065-4840a0b75743"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{id_role}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="50" height="20" backcolor="#567AFC" uuid="69212ba0-25c1-4a64-93be-68f10b6a3569"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="180" y="0" width="400" height="20" backcolor="#7894FA" uuid="95d4d02f-bd68-4274-9ab4-e37caaa176b6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{namerole}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="110" y="0" width="70" height="20" backcolor="#567AFC" uuid="07b325fb-3304-4e78-8152-a907e0502fbc"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[NAME ROLE]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
