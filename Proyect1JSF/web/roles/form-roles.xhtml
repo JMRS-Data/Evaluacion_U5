@@ -14,7 +14,7 @@
                 <h2>#{str.rolFormHeader}</h2>
                 <p:fieldset legend="#{str.rolLegendForm}">
                 <h:form>
-                    <p:inputText placeholder="#{str.rolNamePrompt}" value="#{roleBean.role.nameRole}"></p:inputText>
+                    <p:inputText placeholder="#{str.rolNamePrompt}" value="#{roleBean.role.roleName}"></p:inputText>
                     <p:commandButton value="#{str.buttonSave}" action="#{roleBean.save()}"></p:commandButton>
                     <p:commandButton value="#{str.buttonDelete}" action="#{roleBean.delete()}"></p:commandButton>
                     <p:commandButton value="#{str.buttonCancel}" action="#{roleBean.cancel()}"></p:commandButton>

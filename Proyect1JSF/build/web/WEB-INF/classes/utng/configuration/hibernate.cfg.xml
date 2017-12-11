@@ -9,7 +9,7 @@
     <property name="hibernate.connection.password">mexico</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.connection.pool_size">1</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.hbm2ddl.auto">create</property>
     <mapping class="utng.model.Role"/>
     <mapping class="utng.model.Module"/>
     <mapping class="utng.model.Office"/>

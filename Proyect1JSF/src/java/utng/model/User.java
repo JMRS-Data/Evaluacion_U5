@@ -17,18 +17,18 @@ public class User implements Serializable{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id_user")
     private Long idUser;
-    @Column(name="nameUser", length=10)
-    private String nameUser;
+    @Column(name="userName", length=10)
+    private String userName;
     @Column(length=40)
     private String pass;
     @ManyToOne()
     @JoinColumn(name="id_role")
     private Role role;
 
-    public User(Long idUser, String nameUser, String pass, Role role) {
+    public User(Long idUser, String userName, String pass, Role role) {
         
         this.idUser = idUser;
-        this.nameUser = nameUser;
+        this.userName = userName;
         this.pass = pass;
         this.role = role;
     }
@@ -45,12 +45,12 @@ public class User implements Serializable{
         this.idUser = idUser;
     }
 
-    public String getNameUser() {
-        return nameUser;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setNameUser(String nameUser) {
-        this.nameUser = nameUser;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPass() {

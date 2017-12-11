@@ -16,11 +16,11 @@ public class UserDAO extends DAO<User>{
     public User login (User user){
         List<String> parameters= new ArrayList<String>();
         List<Object> values = new ArrayList<Object>();
-        parameters.add("nameUser");
+        parameters.add("userName");
         parameters.add("pass");
-        values.add(user.getNameUser());
+        values.add(user.getUserName());
         values.add(user.getPass());
-        user = query("SELECT u FROM "+model.getClass().getName()+" u WHERE u.nameUser =:nameUser AND u.pass=:pass", 
+        user = query("SELECT u FROM "+model.getClass().getName()+" u WHERE u.userName =:userName AND u.pass=:pass", 
                 parameters, values);
         return user;
     }

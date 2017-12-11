@@ -123,13 +123,4 @@ public class UserBean implements Serializable{
             return "Exit";
     }
     
-//    public String print(){
-//        UserDAO dao = new UserDAO();
-//        
-//        String reportPath = FacesContext.getCurrentInstance().getExternalContext().getRealPath("/reports/master_report.jasper");
-//        //JasperPrint jasperPrint = JasperFillManager.fillReport(reportPath, new HashMap(),dao.);
-//        return "Print";
-//    }
-    
-    
 }

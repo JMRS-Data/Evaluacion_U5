@@ -1,4 +1,4 @@
-package utng.configuracion;
+package utng.configuration;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -11,7 +11,7 @@ public class HibernateUtil {
     static{
         try {
             sessionFactory= new AnnotationConfiguration().configure("/utng/"
-            +"configuracion/hibernate.cfg.xml").buildSessionFactory();
+            +"configuration/hibernate.cfg.xml").buildSessionFactory();
             session=sessionFactory.openSession();
         } catch (HibernateException e) {
             throw new ExceptionInInitializerError(

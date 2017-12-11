@@ -22,10 +22,10 @@ and open the template in the editor.
                     <p:fieldset legend="#{str.legendForm}">
                          <h:form>
                              <h:panelGrid columns="1">
-                                 <p:inputText placeholder="#{str.namePrompt}" value="#{userBean.user.nameUser}"></p:inputText>
+                                 <p:inputText placeholder="#{str.namePrompt}" value="#{userBean.user.userName}"></p:inputText>
                                  <p:inputText placeholder="#{str.passwordPrompt}" value="#{userBean.user.pass}" type="password"></p:inputText>
                                  <p:selectOneMenu value="#{userBean.user.role.idRole}">
-                                     <f:selectItems value="#{userBean.roles}" var="r" itemLabel="#{r.nameRole}" itemValue="#{r.idRole}"></f:selectItems>                                     
+                                     <f:selectItems value="#{userBean.roles}" var="r" itemLabel="#{r.roleName}" itemValue="#{r.idRole}"></f:selectItems>                                     
                                  </p:selectOneMenu>                                 
                              </h:panelGrid>
                              <p:commandButton value="#{str.buttonSave}" action="#{userBean.save()}" />

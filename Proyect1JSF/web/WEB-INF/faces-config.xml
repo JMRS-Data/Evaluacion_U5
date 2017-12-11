@@ -5,7 +5,7 @@
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
     <application>
         <resource-bundle>
-            <base-name>utng.configuracion.strings</base-name>
+            <base-name>utng.configuration.strings</base-name>
             <var>str</var>
         </resource-bundle>           
     </application>

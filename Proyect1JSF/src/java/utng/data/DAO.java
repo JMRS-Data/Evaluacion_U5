@@ -11,7 +11,7 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
-import utng.configuracion.HibernateUtil;
+import utng.configuration.HibernateUtil;
 
 public abstract class DAO<T>{
     protected Session session;
